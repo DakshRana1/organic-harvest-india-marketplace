@@ -5,8 +5,7 @@ import CategoryGrid from '../components/CategoryGrid';
 import ProductGrid from '../components/ProductGrid';
 import SubscriptionBanner from '../components/SubscriptionBanner';
 import SustainabilitySection from '../components/SustainabilitySection';
-
-const API = 'http://localhost:5000/api';
+import { API } from '../config';
 
 export default function HomePage() {
   const [products, setProducts] = useState([]);

@@ -1,6 +1,5 @@
 import { useState } from 'react';
-
-const API = 'http://localhost:5000/api';
+import { API } from '../config';
 
 const footerLinks = {
   'The Brand': ['Our Story', 'Sustainability', 'Farm Partners', 'Certifications'],

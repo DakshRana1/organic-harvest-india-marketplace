@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
-
-const API = 'http://localhost:5000/api';
+import { API } from '../config';
 
 export default function ProductDetailPage() {
   const { id } = useParams();

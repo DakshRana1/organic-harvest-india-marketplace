@@ -1,6 +1,5 @@
 import { useState } from 'react';
-
-const API = 'http://localhost:5000/api';
+import { API } from '../config';
 
 export default function SubscriptionBanner() {
   const [email, setEmail] = useState('');

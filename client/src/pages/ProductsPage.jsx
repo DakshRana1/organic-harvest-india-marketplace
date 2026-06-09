@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
-
-const API = 'http://localhost:5000/api';
+import { API } from '../config';
 
 const ALL_CATEGORIES = [
   { id: 'all', name: 'All' },
