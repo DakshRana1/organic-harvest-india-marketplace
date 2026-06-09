@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Organic Harvest India | Premium Conscious Living</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#ff985a",
+                    "secondary": "#1b6b4f",
+                    "tertiary-fixed": "#ffdbca",
+                    "on-tertiary-fixed": "#331200",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f3f4f5",
+                    "surface-variant": "#e1e3e4",
+                    "surface-bright": "#f8f9fa",
+                    "on-primary-fixed-variant": "#0b513d",
+                    "surface-container-high": "#e7e8e9",
+                    "on-secondary-container": "#247155",
+                    "surface-dim": "#d9dadb",
+                    "on-secondary-fixed": "#002115",
+                    "secondary-container": "#a6f2cf",
+                    "secondary-fixed-dim": "#8bd6b4",
+                    "tertiary": "#502000",
+                    "on-primary-fixed": "#002117",
+                    "on-tertiary": "#ffffff",
+                    "primary": "#003527",
+                    "surface-tint": "#2b6954",
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#f8f9fa",
+                    "outline-variant": "#bfc9c3",
+                    "secondary-fixed": "#a6f2cf",
+                    "primary-container": "#064e3b",
+                    "outline": "#707974",
+                    "inverse-surface": "#2e3132",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#733100",
+                    "on-secondary-fixed-variant": "#00513a",
+                    "surface-container": "#edeeef",
+                    "on-error-container": "#93000a",
+                    "on-surface-variant": "#404944",
+                    "primary-fixed-dim": "#95d3ba",
+                    "on-tertiary-fixed-variant": "#763300",
+                    "on-surface": "#191c1d",
+                    "background": "#f8f9fa",
+                    "inverse-primary": "#95d3ba",
+                    "primary-fixed": "#b0f0d6",
+                    "on-primary-container": "#80bea6",
+                    "on-background": "#191c1d",
+                    "surface-container-highest": "#e1e3e4",
+                    "inverse-on-surface": "#f0f1f2",
+                    "tertiary-fixed-dim": "#ffb68e",
+                    "on-secondary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "stack-md": "24px",
+                    "unit": "8px",
+                    "margin-desktop": "64px",
+                    "section-gap": "80px",
+                    "stack-sm": "12px",
+                    "margin-mobile": "20px",
+                    "stack-lg": "48px"
+            },
+            "fontFamily": {
+                    "title-md": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Source Serif 4"],
+                    "headline-lg": ["Source Serif 4"],
+                    "display-lg": ["Source Serif 4"],
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #f8f9fa; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .organic-shadow { shadow: 0px 10px 30px rgba(6, 78, 59, 0.05); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Navigation Sliding Underline */
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #1b6b4f;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+
+        /* Scroll Progress Bar */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: #1b6b4f;
+            z-index: 100;
+        }
+
+        /* Animations */
+        @media (prefers-reduced-motion: no-preference) {
+            .reveal {
+                opacity: 0;
+                transform: translateY(30px);
+                transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            }
+            .reveal.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .hero-entrance {
+                opacity: 0;
+                transform: translateY(20px);
+                animation: soft-entrance 1.2s forwards cubic-bezier(0.16, 1, 0.3, 1);
+            }
+            @keyframes soft-entrance {
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            .pulse-btn {
+                animation: pulse 2s infinite;
+            }
+            @keyframes pulse {
+                0% { box-shadow: 0 0 0 0 rgba(166, 242, 207, 0.4); }
+                70% { box-shadow: 0 0 0 15px rgba(166, 242, 207, 0); }
+                100% { box-shadow: 0 0 0 0 rgba(166, 242, 207, 0); }
+            }
+
+            .shimmer {
+                position: relative;
+                overflow: hidden;
+            }
+            .shimmer::after {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: linear-gradient(
+                    to bottom right,
+                    transparent,
+                    rgba(255,255,255,0.05),
+                    transparent
+                );
+                transform: rotate(45deg);
+                animation: shimmer 6s infinite;
+            }
+            @keyframes shimmer {
+                0% { transform: translate(-100%, -100%) rotate(45deg); }
+                100% { transform: translate(100%, 100%) rotate(45deg); }
+            }
+
+            .cart-anim {
+                animation: cart-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+            @keyframes cart-pop {
+                50% { transform: scale(1.4); }
+            }
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<div id="scroll-progress"></div>
+<!-- Top Navigation -->
+<header class="bg-surface sticky top-0 z-50 shadow-[0px_10px_30px_rgba(6,78,59,0.05)]">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="text-title-md font-title-md font-bold text-primary cursor-pointer">Organic Harvest India</div>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="nav-link text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-300" href="#">Fruits</a>
+<a class="nav-link text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-300" href="#">Vegetables</a>
+<a class="nav-link text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-300" href="#">Grains</a>
+<a class="nav-link text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-300" href="#">Dairy</a>
+</div>
+<div class="flex items-center gap-stack-sm">
+<div class="hidden lg:flex items-center bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant/30">
+<span class="material-symbols-outlined text-outline text-[20px]">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md w-48" placeholder="Search harvest..." type="text"/>
+</div>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors hover:scale-110 active:scale-95 duration-200"><span class="material-symbols-outlined">favorite</span></button>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors hover:scale-110 active:scale-95 duration-200"><span class="material-symbols-outlined">shopping_cart</span></button>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors hover:scale-110 active:scale-95 duration-200"><span class="material-symbols-outlined">person</span></button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[870px] flex items-center overflow-hidden" id="hero-section">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover scale-110 will-change-transform" data-alt="A breathtaking aerial view of a sprawling, lush green organic farm at sunrise." id="hero-parallax" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_-v9rEWJ4XEuno47XDDiX0vBuDfa35cloc3KnQkXMvj-eZZjVA-LGim47WzDpKhjYyZglQd4nQzifcFM-OXDxFkOGmOI8D6ryJjxxQVfKjTdPYqiiystp7Lr7inOoWoZeiCsxPZ7mergQEdt2fcz0kGj-LL43Mu7Pj28amZqXjOfhHP8hlsQ8jJb9d3c7valXfp1OSskrD2M3jOsQ1_DT-b-vGAZQQy_Pfm9L3To6gKHA3qVaEjSQRXPjWObeZFgS4a0rW-rkCYU"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/60 via-primary/30 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full text-white">
+<div class="max-w-2xl">
+<span class="hero-entrance inline-block px-4 py-1.5 rounded-full bg-secondary-container/20 backdrop-blur-md text-secondary-fixed text-label-sm mb-stack-sm border border-secondary-fixed/30" style="animation-delay: 0.1s">FARM-TO-TABLE FRESHNESS</span>
+<h1 class="hero-entrance font-display-lg text-[40px] md:text-display-lg mb-stack-md leading-tight" style="animation-delay: 0.3s">Heritage Farming Meets Modern Conscious Living</h1>
+<p class="hero-entrance font-body-lg text-white/90 mb-stack-lg max-w-lg" style="animation-delay: 0.5s">Directly from India's most pristine organic farms to your doorstep. Transparent, ethical, and intentionally pure.</p>
+<div class="hero-entrance flex flex-wrap gap-4" style="animation-delay: 0.7s">
+<button class="bg-primary hover:bg-primary-container text-white px-stack-lg py-4 rounded-full font-title-md transition-all duration-300 shadow-xl flex items-center gap-2 group active:scale-95">
+                            Shop Fresh Now
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="border border-white/50 hover:bg-white/10 text-white px-stack-lg py-4 rounded-full font-title-md transition-all duration-300 backdrop-blur-sm active:scale-95">
+                            Explore Story
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Bar -->
+<section class="reveal bg-white border-b border-outline-variant/10 py-10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-wrap justify-between gap-stack-lg">
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-full bg-secondary-container/30 flex items-center justify-center text-secondary transition-transform group-hover:rotate-[15deg]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<p class="font-title-md text-primary leading-tight">100% Certified</p>
+<p class="text-label-sm text-on-surface-variant">Global Organic Standards</p>
+</div>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-full bg-secondary-container/30 flex items-center justify-center text-secondary transition-transform group-hover:rotate-[-15deg]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<div>
+<p class="font-title-md text-primary leading-tight">Plastic Free</p>
+<p class="text-label-sm text-on-surface-variant">Sustainable Packaging</p>
+</div>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-full bg-secondary-container/30 flex items-center justify-center text-secondary transition-transform group-hover:rotate-[15deg]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">agriculture</span>
+</div>
+<div>
+<p class="font-title-md text-primary leading-tight">Direct from Farmers</p>
+<p class="text-label-sm text-on-surface-variant">Fair Trade Empowerment</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Categories -->
+<section class="reveal py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-lg text-primary mb-2">Shop by Category</h2>
+<div class="w-20 h-1 bg-secondary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<a class="group text-center" href="#">
+<div class="relative w-full aspect-square rounded-full overflow-hidden mb-4 border-4 border-transparent group-hover:border-secondary-container group-hover:shadow-[0_0_20px_rgba(27,107,79,0.3)] transition-all duration-500 shadow-[0px_10px_30px_rgba(6,78,59,0.05)] transform group-hover:scale-105">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Organic seasonal fruits" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw9N8f42OJdyLAKwbFPdbDXPNeeMd8eakMup1eZOfgyef07gpsnYi5M7kw-fBj6zYz06ARyYJOgRzbPoVDs8X_hPm7Cd5j1cCim7b-WQdzThO-rRJd4fUHSV5C_tRPBpXzsF4sQJKcNwPxLrhJNbavaw80iGA-zq3wXV93WiV2Sq2lYvtNPkXPVc66-rcNUm_sojp4B1E2gPD-rKecZCCNHhalry2t7_EXjYGnAXZIIpDn18eRMzCapckuxt35iPCxHGPu5uuRmsQ"/>
+</div>
+<span class="font-title-md text-primary group-hover:text-secondary transition-colors">Fruits</span>
+</a>
+<a class="group text-center" href="#">
+<div class="relative w-full aspect-square rounded-full overflow-hidden mb-4 border-4 border-transparent group-hover:border-secondary-container group-hover:shadow-[0_0_20px_rgba(27,107,79,0.3)] transition-all duration-500 shadow-[0px_10px_30px_rgba(6,78,59,0.05)] transform group-hover:scale-105">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Crisp organic vegetables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnTiUII3W1UCHLi3BXdJmEyh9v_fNN6tpvBKCKkjSpuuGX99MB1mS2KTUWGCqbglxt20G1VBn3tEWahxwJECjg3iPUgETuTRkY9l17t_IDJTel414MNBPpm1RinF1Rn-f8sUbxXR5y2bXrNDEDOc0-rSCeba6U8QoH6-MHxkLLZ45vjSM3I4HavfLCF2CnqP-yVib9thQ07IpUBJjJoihRVdliUA_tPD2tc5U3ptJK5ypbwiq4KYDMkuTjWSt0LKbDW6K1SR5UlsQ"/>
+</div>
+<span class="font-title-md text-primary group-hover:text-secondary transition-colors">Veggies</span>
+</a>
+<a class="group text-center" href="#">
+<div class="relative w-full aspect-square rounded-full overflow-hidden mb-4 border-4 border-transparent group-hover:border-secondary-container group-hover:shadow-[0_0_20px_rgba(27,107,79,0.3)] transition-all duration-500 shadow-[0px_10px_30px_rgba(6,78,59,0.05)] transform group-hover:scale-105">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Fresh organic dairy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlU0n7IyPz_tbJNp6764pDCr_2Un5pH8w7vIRvCVGzejpg5ZXOiAzwz7Ij3030M0Ir9QRCM0lDZwiepRGXLhZzhJVj9MpyD5FXDndymJ-W3UR3PbmWrRrXYaen5Z1152BwjT7RKQBMFHYvunZ-y-QEaSkkMUC5nQmxP-C3KnDEWJhaQXf62ku6Yrf0yBlpNVHqnMAQMfvMvgj7H6NLvk0ea6rlKdha5tdPrRUf9_ElE6anadtZD5elmytTFYmwK6ntyrOkUgdRQFI"/>
+</div>
+<span class="font-title-md text-primary group-hover:text-secondary transition-colors">Dairy</span>
+</a>
+<a class="group text-center" href="#">
+<div class="relative w-full aspect-square rounded-full overflow-hidden mb-4 border-4 border-transparent group-hover:border-secondary-container group-hover:shadow-[0_0_20px_rgba(27,107,79,0.3)] transition-all duration-500 shadow-[0px_10px_30px_rgba(6,78,59,0.05)] transform group-hover:scale-105">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Ancient organic grains" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChrNCe9HmdDKWNaInswWz1nayDi6miA9MlIyzC0_O_9gHwBsIT-84d8UVDgFNXQ2obkpeGY2FS6YF5YZXNXq9QrB948mZeCxkfE_lbYUulPulgccI7pCqcO7ljBOJlz96eoRD1densfDtYfadd2TYabP0ATsjsZ5Dj-htwcwkK_Zb75oH3-xb_1Jw6OGaeg0ctzpzkygBWlpWR3U_M1oW--X0ltAYOMPpfdBOu0z2krvayvUrT76uPFNQFvmoOp_TaBwaooPpM2XE"/>
+</div>
+<span class="font-title-md text-primary group-hover:text-secondary transition-colors">Grains</span>
+</a>
+</div>
+</section>
+<!-- Featured Products -->
+<section class="reveal bg-surface-container-low py-section-gap">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-stack-lg">
+<div>
+<h2 class="font-headline-lg text-primary">Harvest Picks</h2>
+<p class="text-on-surface-variant">The finest selections from this week's harvest.</p>
+</div>
+<a class="text-secondary font-title-md flex items-center gap-1 group" href="#">
+                        View All <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Product 1 -->
+<div class="bg-white rounded-xl overflow-hidden group shadow-[0px_10px_30px_rgba(6,78,59,0.05)] hover:shadow-[0px_20px_40px_rgba(6,78,59,0.1)] hover:-translate-y-2 transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Fresh organic carrots" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFpDhCBh2w5xO4yXayT59fKmRoIiYFadKRAvy9uX2BiHuzaEPMAktENo3KK9wQI3XTJygnOqeRDfnXINfF0gLnDTxFPP__3RhIUlsRcPyaQ4ACzyB8dW6Qp2lk4ouvmb7a-CxJr3OKPT16A0W91UfDoyFbXX2s3DQgpKLtdBRPMct_Ts1qwnqvuigU05nPrLWI6eDNxq540z2rp1dt6owuRGdK6rZnQd0LPfTXx6CkJPG-kTNXHKRjjsrqFNkBZtJfoQe4QoMl7Nk"/>
+<div class="absolute top-4 left-4 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm">BESTSELLER</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-title-md text-primary">Mountain Carrots</h3>
+<div class="flex items-center text-on-tertiary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-sm ml-1">4.9</span>
+</div>
+</div>
+<p class="text-label-sm text-on-surface-variant mb-4 uppercase">500G • ORGANIC</p>
+<div class="flex items-center justify-between">
+<span class="text-title-md font-bold text-primary">₹85</span>
+<button class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-secondary transition-all shadow-lg active:scale-90" onclick="addToCartAnim(this)">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="bg-white rounded-xl overflow-hidden group shadow-[0px_10px_30px_rgba(6,78,59,0.05)] hover:shadow-[0px_20px_40px_rgba(6,78,59,0.1)] hover:-translate-y-2 transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Heirloom cherry tomatoes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZXFNsMt29nEH9I5oxfN25ySdVmf6UHCOhGXvmF5d5OHakmiipc8L11GL6SlCbMV4YroaIUf6mN2ABeMY9JDgVMXawu-FndPpwh2mSPsK1NAtXLvwbYIKAcbM2ZPfImkHQpHbtcKcWI3p-gjt0NuBy1HCBbvk7ZjIIpWoV7qQX8oq0V2igS9u7oZL1TPFN6bsV_IbAqJ_vPqzioLO8LvsrIWzP7GIut9R8D7bPT-ijdz_TWm2iCrT1fWVaIe8k9mkQZTbzxLWkW1M"/>
+<div class="absolute top-4 left-4 bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full text-label-sm">NEW IN</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-title-md text-primary">Heirloom Tomatoes</h3>
+<div class="flex items-center text-on-tertiary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-sm ml-1">4.8</span>
+</div>
+</div>
+<p class="text-label-sm text-on-surface-variant mb-4 uppercase">250G • LOCAL</p>
+<div class="flex items-center justify-between">
+<span class="text-title-md font-bold text-primary">₹120</span>
+<button class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-secondary transition-all shadow-lg active:scale-90" onclick="addToCartAnim(this)">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="bg-white rounded-xl overflow-hidden group shadow-[0px_10px_30px_rgba(6,78,59,0.05)] hover:shadow-[0px_20px_40px_rgba(6,78,59,0.1)] hover:-translate-y-2 transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Pure wild honey" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4leOQXr0331aYlMAjp3nsp-DfMNHozcJtK2To22PcZLbR2SWO6FxOXoXVjKEgdNKBeXCmeNZIkeYj4gSLUwT5S8uHjQNiVtEzR0FuMNVsptU9Cn2xUjXGTytdRJP2xMtKxtCj0SL4PyjHBG1O4mPoya5bFP1f9A67iG0yh5YqAI5ZcBoMyB05K73iueoo8fXmRSHsq3wtRQZLmKuYlsvy1Y7w5VHNjfz8ypMIWAZM0nQVIEovaV5iap2ybJaXb0rHLvaP2a5AqnU"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-title-md text-primary">Raw Wild Honey</h3>
+<div class="flex items-center text-on-tertiary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-sm ml-1">5.0</span>
+</div>
+</div>
+<p class="text-label-sm text-on-surface-variant mb-4 uppercase">400G • PURE</p>
+<div class="flex items-center justify-between">
+<span class="text-title-md font-bold text-primary">₹450</span>
+<button class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-secondary transition-all shadow-lg active:scale-90" onclick="addToCartAnim(this)">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="bg-white rounded-xl overflow-hidden group shadow-[0px_10px_30px_rgba(6,78,59,0.05)] hover:shadow-[0px_20px_40px_rgba(6,78,59,0.1)] hover:-translate-y-2 transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Artisanal A2 Ghee" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSWNXdpoJJjHVEeqajfYxj4s4Hb1YTkaK2mThEmthYIqvycb6ITQhMN8ZFtgqQ6icewa6utHyD_dO3jpNb57fzYFBKTMl8bqwA8mkgA45GXnlKD8CTR7HrjOZo_tBs6WTGaY3xUwkTgNhRFxtqzzN35iE1WbY8cFeeZYRjy20Ru3VpwN4U2yKjox_u_Htb6ZJDhK0qK16olL2pc6rY5reuiUmymSPx135OYBQGDQIiBu2-RuM5IPBzJZZxdHsmyJqGFOSaUPVfmdM"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-title-md text-primary">Artisanal A2 Ghee</h3>
+<div class="flex items-center text-on-tertiary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-sm ml-1">4.9</span>
+</div>
+</div>
+<p class="text-label-sm text-on-surface-variant mb-4 uppercase">500ML • VEDIC</p>
+<div class="flex items-center justify-between">
+<span class="text-title-md font-bold text-primary">₹890</span>
+<button class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-secondary transition-all shadow-lg active:scale-90" onclick="addToCartAnim(this)">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Subscription Section -->
+<section class="reveal py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="shimmer relative rounded-3xl overflow-hidden bg-primary p-gutter md:p-stack-lg">
+<div class="absolute top-0 right-0 w-1/3 h-full hidden lg:block opacity-20 transition-transform duration-1000 hover:scale-105">
+<img class="w-full h-full object-cover" data-alt="Weekly subscription box" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf5qu3f28uh51IBDH66Z-gzUtAAA1ZL7KM42Gg61BiLDRiSKa2YIPXhcEBEL9XqPPbginc4m1qHQptKmwyPFyAwXrF3nrag2hLWFbOVqlkd6zcrPE4gIKK-X_fjPI7UcMqAha-x2ZwmkiU9CPRX2Dm4mgsnvzJuulQ6xhqn9tSYiXJW3TdqTEMXz8DemTdZJSxSskf_I3FBSNyxf8xNpZrWN3_9nKBs3rDTjmRkP0V3OE0bkbddxJfAS8uz00uK0DUGTOgO9uqYY0"/>
+</div>
+<div class="relative z-10 max-w-2xl text-white">
+<h2 class="font-display-lg text-[32px] md:text-headline-lg mb-4">Harvest Memberships</h2>
+<p class="font-body-lg text-primary-fixed mb-stack-lg">Save 20% on your weekly organic essentials with our curated seasonal baskets. Freshness delivered, consistency guaranteed.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-stack-lg">
+<div class="bg-primary-container p-6 rounded-2xl border border-primary-fixed/20 hover:bg-primary-container/80 transition-colors cursor-default">
+<span class="material-symbols-outlined text-secondary-fixed mb-2">calendar_today</span>
+<h4 class="font-title-md mb-1">Weekly Basket</h4>
+<p class="text-label-sm text-primary-fixed">Perfect for a family of four.</p>
+</div>
+<div class="bg-primary-container p-6 rounded-2xl border border-primary-fixed/20 hover:bg-primary-container/80 transition-colors cursor-default">
+<span class="material-symbols-outlined text-secondary-fixed mb-2">lock_reset</span>
+<h4 class="font-title-md mb-1">Pause Anytime</h4>
+<p class="text-label-sm text-primary-fixed">Flexible plans for your lifestyle.</p>
+</div>
+</div>
+<button class="pulse-btn bg-secondary-fixed text-on-secondary-fixed px-stack-lg py-4 rounded-full font-title-md hover:scale-105 active:scale-95 transition-all shadow-xl">
+                        Subscribe &amp; Save Now
+                    </button>
+</div>
+</div>
+</section>
+<!-- Sustainability Story -->
+<section class="reveal py-section-gap bg-white overflow-hidden">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col lg:flex-row items-center gap-stack-lg">
+<div class="lg:w-1/2 relative group">
+<div class="relative z-10 rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="Portrait of an Indian organic farmer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrdGgq5IRokVMsyFRyMc6Qg9tDCh-Jrp137gAi2ZSHZwGiHqstsClbRlIWr4ik7_hUXAp7CDCrRgDIRcMNroFF1EHE9yFotQyMax4N3xN-daSMBWP-DOQJRog1X5FQY2xvp5cvSxkGZqUgmp2vJnH5dEVdhTXqMVheLsWIhuRbePSHzevEfQh_6eL79f4xCZGq6ODOW1TpBR0CWT37HIV4ipLQHrv8BibvOPcWh0DKlQZsK3Ex8groxLrZ3urgzQL412VsAe1BA4Y"/>
+</div>
+<div class="absolute -bottom-6 -right-6 w-48 h-48 bg-secondary-container/30 rounded-full -z-0 animate-pulse"></div>
+<div class="absolute -top-6 -left-6 w-32 h-32 bg-tertiary-fixed/30 rounded-full -z-0" style="animation: pulse 4s infinite"></div>
+</div>
+<div class="lg:w-1/2">
+<span class="text-secondary font-label-sm uppercase tracking-widest mb-4 block">Our Conscience</span>
+<h2 class="font-headline-lg text-primary mb-stack-md leading-tight">Every harvest tells a story of revival and respect.</h2>
+<p class="font-body-lg text-on-surface-variant mb-6">We don't just sell organic produce; we partner with small-scale farmers across India to restore soil health and ensure fair livelihoods. Our plastic-free packaging is just the beginning of our journey toward a zero-waste future.</p>
+<div class="space-y-4 mb-stack-lg">
+<div class="flex items-start gap-4 group">
+<span class="material-symbols-outlined text-secondary transition-transform group-hover:scale-125" style="font-variation-settings: 'FILL' 1;">handshake</span>
+<div>
+<h4 class="font-title-md text-primary">Farm Partners</h4>
+<p class="text-body-md text-on-surface-variant">Supporting over 500+ indigenous families with fair trade pricing.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 group">
+<span class="material-symbols-outlined text-secondary transition-transform group-hover:scale-125" style="font-variation-settings: 'FILL' 1;">recycling</span>
+<div>
+<h4 class="font-title-md text-primary">Eco-Packaging</h4>
+<p class="text-body-md text-on-surface-variant">Compostable liners and reclaimed wood crates for every delivery.</p>
+</div>
+</div>
+</div>
+<button class="text-primary font-title-md border-b-2 border-secondary pb-1 hover:text-secondary hover:border-primary transition-all">
+                            Read Our Impact Report
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-title-md font-title-md font-bold text-primary mb-stack-md">Organic Harvest India</div>
+<p class="text-body-md text-on-surface-variant mb-stack-md">Nurturing a healthier India through transparent farming and premium conscious living.</p>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-all hover:scale-125" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-all hover:scale-125" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-all hover:scale-125" href="#"><span class="material-symbols-outlined">call</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-title-md text-primary mb-stack-md">The Brand</h4>
+<ul class="space-y-stack-sm">
+<li><a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-all" href="#">Our Story</a></li>
+<li><a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-all" href="#">Sustainability</a></li>
+<li><a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-all" href="#">Farm Partners</a></li>
+<li><a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-all" href="#">Certifications</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-title-md text-primary mb-stack-md">Customer Care</h4>
+<ul class="space-y-stack-sm">
+<li><a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-all" href="#">Shipping Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-all" href="#">Refunds &amp; Returns</a></li>
+<li><a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-all" href="#">Subscription FAQ</a></li>
+<li><a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-all" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-title-md text-primary mb-stack-md">Newsletter</h4>
+<p class="text-label-sm text-on-surface-variant mb-4">Join our conscious community for weekly harvest updates.</p>
+<form class="flex flex-col gap-2">
+<input class="bg-surface-container-low border-none rounded-xl px-4 py-2 focus:ring-1 focus:ring-secondary text-body-md" placeholder="Your email address" type="email"/>
+<button class="bg-primary text-white rounded-xl py-2 font-title-md hover:bg-secondary transition-colors active:scale-95">Join Now</button>
+</form>
+</div>
+</div>
+<div class="border-t border-outline-variant py-8 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+<p class="text-label-sm text-on-surface-variant">© 2024 Organic Harvest India. Premium Conscious Living.</p>
+</div>
+</footer>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Intersection Observer for Entrance Animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(el => {
+                revealObserver.observe(el);
+            });
+
+            // Hero Parallax Effect
+            const heroParallax = document.getElementById('hero-parallax');
+            window.addEventListener('scroll', () => {
+                if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+                    const scrolled = window.pageYOffset;
+                    if (heroParallax) {
+                        heroParallax.style.transform = `translateY(${scrolled * 0.3}px) scale(1.1)`;
+                    }
+                }
+            });
+
+            // Scroll Progress Bar
+            const progressBar = document.getElementById('scroll-progress');
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                progressBar.style.width = scrolled + "%";
+            });
+        });
+
+        // Add to Cart Animation
+        function addToCartAnim(btn) {
+            if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+                const icon = btn.querySelector('.material-symbols-outlined');
+                icon.classList.add('cart-anim');
+                
+                // Change icon temporarily
+                const originalText = icon.innerText;
+                icon.innerText = 'check_circle';
+                
+                setTimeout(() => {
+                    icon.classList.remove('cart-anim');
+                    icon.innerText = originalText;
+                }, 1000);
+            }
+        }
+    </script>
+</body></html>
