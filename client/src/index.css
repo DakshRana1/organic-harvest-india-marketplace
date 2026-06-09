@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-surface text-on-surface font-sans;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    @apply bg-secondary-container text-on-secondary-container;
+  }
+}
+
+@layer components {
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+  }
+  .material-symbols-filled {
+    font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  }
+
+  /* Scroll progress bar */
+  #scroll-progress {
+    position: fixed;
+    top: 0; left: 0;
+    width: 0%;
+    height: 3px;
+    background: #1b6b4f;
+    z-index: 9999;
+    transition: width 0.1s linear;
+  }
+
+  /* Nav underline hover */
+  .nav-link { @apply relative; }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0; height: 2px;
+    bottom: -4px; left: 0;
+    background-color: #1b6b4f;
+    transition: width 0.3s ease;
+  }
+  .nav-link:hover::after { width: 100%; }
+
+  /* Organic shadow */
+  .shadow-organic { box-shadow: 0px 10px 30px rgba(6,78,59,0.05); }
+  .shadow-organic-lg { box-shadow: 0px 20px 40px rgba(6,78,59,0.1); }
+
+  /* Reveal on scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Hero entrance animation utilities */
+  .hero-entrance {
+    opacity: 0;
+    animation: soft-entrance 1.2s cubic-bezier(0.16,1,0.3,1) forwards;
+  }
+
+  /* Shimmer overlay for subscription card */
+  .shimmer-overlay {
+    position: relative;
+    overflow: hidden;
+  }
+  .shimmer-overlay::after {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: linear-gradient(to bottom right, transparent, rgba(255,255,255,0.04), transparent);
+    transform: rotate(45deg);
+    animation: shimmer 6s infinite;
+  }
+
+  /* No scrollbar utility */
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  /* Cart badge pulse */
+  .cart-badge { animation: badge-bounce 0.3s ease-out; }
+}
