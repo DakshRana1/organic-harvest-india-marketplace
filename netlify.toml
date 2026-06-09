@@ -1,0 +1,17 @@
+# Netlify configuration file for Organic Harvest India
+
+[build]
+  # The directory where the frontend app is located
+  base = "client"
+
+  # The directory that contains the deploy-ready HTML/CSS/JS (relative to the base directory)
+  publish = "dist"
+
+  # The command to run to build the app
+  command = "npm run build"
+
+# Redirect rules to support React Router (Single Page App routing)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
